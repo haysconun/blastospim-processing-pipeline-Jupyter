@@ -6,6 +6,7 @@
 ### Download sample data and Stardist-3D models.
 
 ### Download code via git clone.
+git clone https://github.com/haysconun/blastospim-processing-pipeline-Jupyter.git
 
 ### Download and install MATLAB.
 
@@ -21,9 +22,9 @@
 
 ### Install Jupyter lab or notebook AND load
 pip install jupyterlab
+
+### Open an instance of Jupyter
 jupyter lab
-
-
 
 # BLASTOSPIM Instance Segmentation and Tracking Pipeline (Jupyter notebook)
 
