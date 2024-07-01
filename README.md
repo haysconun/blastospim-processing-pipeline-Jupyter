@@ -1,3 +1,30 @@
+
+# BLASTOSPIM Instance Segmentation and Tracking Pipeline (Jupyter notebook) for your own machine (no GPU)
+
+## Step 1: Installing MATLAB & Python and downloading sample files
+
+### Download sample data and Stardist-3D models.
+
+### Download code via git clone.
+
+### Download and install MATLAB.
+
+### Make sure that you have installed Python 3.9.
+
+### pip should be automatically installed with Python 3.9, but if not, install pip.
+
+## Step 2: Make virtual environment, pip install requirements, & open Jupyter.
+
+### Install virtualenv, if not already installed.
+
+### In terminal, create a new virtual environment AND check the python version of the virtual environment.
+
+### Install Jupyter lab or notebook AND load
+pip install jupyterlab
+jupyter lab
+
+
+
 # BLASTOSPIM Instance Segmentation and Tracking Pipeline (Jupyter notebook)
 
 ## Step 1: Installing dependencies and downloading sample files
