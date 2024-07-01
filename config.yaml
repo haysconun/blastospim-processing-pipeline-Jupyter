@@ -1,0 +1,24 @@
+###YAML config file for image registration and lineage tracking 
+
+# What is the path and the prefix for the embryo names?
+data_path: '/mnt/home/hnunley/revised_code_for_pipeline/data/small_Corrected_Segmentation'
+name_of_embryo: 'klbOut_Cam_Long_'
+suffix_for_embryo: '.lux.label.tif'
+suffix_for_embryo_alternative: '.lux_SegmentationCorrected.tif'
+
+# Output Directory
+output_dir: '/mnt/home/hnunley/revised_code_for_pipeline/data/Expected_Track'
+
+# Registeration Options
+register_begin_frame: 15 # Begin with 1 for Lisa's Registration, 0 otherwise. Start with 1 for tracking
+register_end_frame: 31 # Last time point for registration - Lisa's registration should have one more frame than this
+num_trials: 1000        # num_trials controls how many random initializations to do
+register_file_name_prefix: test # prefix before _transforms.mat
+
+
+# Tracking Options
+track_begin_frame: 15 # Start with 1 for tracking
+track_end_frame: 30   # Last time point for tracking should be one less 
+marker_size: 5
+marker_font_size: 10
+track_file_name_prefix: test_track # prefix before _start_end_graph.mat
