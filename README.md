@@ -3,15 +3,15 @@
 
 ## Step 1: Installing MATLAB & Python and downloading sample files
 
-### Download sample data and Stardist-3D models.
-Use gdown -- download_folder
-
 ### Download code via git clone.
 git clone https://github.com/haysconun/blastospim-processing-pipeline-Jupyter
 
+### Download sample data and Stardist-3D models.
+Use gdown -- download_folder
+
 ### Download and install MATLAB.
 
-### Make sure that you have installed Python 3.9.
+### Install Python 3.9, if not installed.
 
 ### pip should be automatically installed with Python 3.9, but if not, install pip.
 
