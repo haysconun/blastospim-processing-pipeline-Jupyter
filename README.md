@@ -7,6 +7,7 @@
 git clone https://github.com/haysconun/blastospim-processing-pipeline-Jupyter
 
 ### Change directory to cloned directory.
+cd blastospim-processing-pipeline-Jupyter
 
 ### Install Python 3.9, if not installed.
 ### pip should be automatically installed with Python 3.9, but if not, install pip.
