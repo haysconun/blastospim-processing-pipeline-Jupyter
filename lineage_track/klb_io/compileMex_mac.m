@@ -1,0 +1,1 @@
+mex -O -output readKLBstack  readKLBstack.cpp -I../src ../build/src/libklb_static.a ../build/src/external/bzip2-1.0.6/libbzip2.a ../build/src/external/zlib-1.2.8/libz.a -D_FILE_OFFSET_BITS=64 -DWINDOWS
