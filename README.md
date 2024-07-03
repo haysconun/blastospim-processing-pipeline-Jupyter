@@ -3,7 +3,7 @@
 
 ## Step 1: Installing MATLAB & Python and downloading sample files
 
-### Download code via git clone (from terminal) -- probably port this into an FI or Princeton git repo
+### Download code via git clone (from terminal) -- TODO: probably make this into an FI or Princeton git repo
 git clone https://github.com/haysconun/blastospim-processing-pipeline-Jupyter
 
 ### Install Python 3.9, if not installed.
@@ -21,22 +21,21 @@ Within the Jupyter notebook, you will replace the matlab command by whatever the
 Check that this works by running a matlab command from terminal like:
 matlab -nosplash -nodesktop -r "1+1 == 2; exit"
 
-For example, on a mac, you will likely have to change directory to your local installation of matlab. --TODO code example
+For example, on a mac, you will likely have to change directory to your local installation of matlab. TODO: code example
 Then, from that directory, run:
 ./matlab -nosplash -nodesktop -r "1+1 == 2; exit"
 
+The way that the single line (in the screenshot) works is: open matlab and passes it a line of code to run and exits (all at once).
+
 ## Step 2: Make virtual environment, pip install requirements, & open Jupyter.
 
-### Install virtualenv, if not already installed.
-https://virtualenv.pypa.io/en/latest/installation.html
-
+### make a virtual environment (with Python 3.9)
 ### In terminal, create a new virtual environment AND check the python version of the virtual environment.
-### When creating the virtual environment, replace the path /path/to/your/python39/installation with the actual path to your python 3.9 installation.
-virtualenv -p /path/to/your/python39/installation pyenvname_39
-MAYBE REPLACE virtualenv for ease of use
+### Replace path/to/venv with the path and name of your virtual environment -- this will create a new folder
+### Then, your new virtual environment and check python version
+python3.9 -m venv path/to/venv
 
-### Activate your new virtual environment and check python version
-source pyenvname_39/bin/activate
+source path/to/venv/bin/activate
 
 python --version
 
