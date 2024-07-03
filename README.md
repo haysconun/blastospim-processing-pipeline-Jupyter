@@ -46,13 +46,25 @@ pip install -r /path/to/requirements_file.txt
 ### Optional: pip install pyklb. pyklb may not install correctly on your machine, but this is NOT required. If this install fails, ignore. 
 pip install git+https://github.com/bhoeckendorf/pyklb.git@skbuild
 
+### Change directory to cloned directory. Replace path/to/your/blastospim-processing-pipeline-Jupyter with the path to your cloned folder.
+cd path/to/your/blastospim-processing-pipeline-Jupyter
+
+### Setup CPD 
+
+1. Open MATLAB and navigate to the code directory called `lineage_track`. Then add the `CPD2` folder and subfolders to PATH. 
+
+2. Then navigate inside the `CPD2` directory and run the command:
+
+```
+cpd_make
+```
+
+*On MAC OSX you will need to install Xcode from the App store and run Xcode once to accept the license aggrement.*
+
 ### Optional: install visualization code. See https://github.com/AaronWatters/volume_gizmos
 git clone https://github.com/AaronWatters/volume_gizmos
 cd volume_gizmos
 pip install -e .
-
-### Change directory to cloned directory. Replace path/to/your/blastospim-processing-pipeline-Jupyter with the path to your cloned folder.
-cd path/to/your/blastospim-processing-pipeline-Jupyter
 
 ### Download sample data and Stardist-3D models (by running python script) -- probably change google drive link to blastospim link for data
 python3 download_data_and_models.py
