@@ -56,7 +56,8 @@ pip install jupyterlab
 ### Open an instance of Jupyter
 jupyter lab
 
-### Verify
+### Open the jupyter notebook called 'pipeline_notebook.ipynb'
+### Evaluate the cells in the notebook to perform segmentation and tracking on the sample data.
 
 # BLASTOSPIM Instance Segmentation and Tracking Pipeline (Jupyter notebook) for a machine with GPUs
 
