@@ -1,6 +1,5 @@
 
-# BLASTOSPIM Instance Segmentation and Tracking Pipeline (Jupyter notebook) for your own machine (no GPU)
-# Please see below for installation instructions on a machine with GPUs
+# BLASTOSPIM Instance Segmentation and Tracking Pipeline for your own machine (Jupyter notebook running on CPU)
 
 ## Step 1: Installing MATLAB & Python and downloading sample files
 
