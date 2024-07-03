@@ -37,6 +37,7 @@ MAYBE REPLACE virtualenv for ease of use
 
 ### Activate your new virtual environment and check python version
 source pyenvname_39/bin/activate
+
 python --version
 
 ### pip install from requirements file. Replace the /path/to/requirements_file.txt with the path to the requirements in your cloned directory.
