@@ -1,0 +1,35 @@
+###YAML config file for image registration and lineage tracking 
+
+# What is the path and the prefix for the embryo names?
+data_path: 'C:/Users/ab50/Documents/git/lineage_track/test/labels'
+name_of_embryo: 'klbOut_Cam_Long_'
+suffix_for_embryo: '.lux.label.klb'
+suffix_for_embryo_alternative: '.lux_SegmentationCorrected.klb'
+
+# Output Directory
+output_dir: 'C:/Users/ab50/Documents/git/lineage_track/test'
+
+
+# Registeration Options
+register_begin_frame: 6 # Begin with 1 for Lisa's Registration, 0 otherwise. Start with 1 for tracking
+register_end_frame: 20  # Last time point for registration - Lisa's registration should have one more frame than this
+num_trials: 1000        # num_trials controls how many random initializations to do
+register_file_name_prefix: test # prefix before _transforms.mat
+
+
+# Tracking Options
+track_begin_frame: 10 # Start with 1 for tracking
+track_end_frame: 19  # Last time point for tracking should be one less 
+marker_size: 5
+marker_font_size: 10
+track_file_name_prefix: test_track # prefix before _start_end_graph.mat
+
+# Tree coloring options
+view_file_name: CombinedGraph_6_20_graph.mat # filename of the tree to be viewed
+color_map: copper(50)                        # Other options autumn, bone, colorcube, cool, copper, flag, gray, hot, hsv, jet, lines, pink, prism, spring, summer, white, winter
+intensity_file: 'C:/Users/ab50/Documents/git/lineage_track/test/nanog_tf-1.csv'
+leaf_node: '020'
+begin_labels: ['006_004', '006_005'] # Begin label of intensity line plot
+end_labels: ['020_005', '020_003'] # End label of intensity line plot
+blackout_begin_labels: ['006_008'] # Begin label of blackout start
+blackout_end_labels: ['020_008'] # End label of blackout ends matched to the begin labels
