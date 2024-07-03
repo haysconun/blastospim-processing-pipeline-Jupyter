@@ -6,14 +6,25 @@
 ### Download code via git clone (from terminal) -- probably port this into an FI or Princeton git repo
 git clone https://github.com/haysconun/blastospim-processing-pipeline-Jupyter
 
-### Download sample data and Stardist-3D models.
-
-
-### Download and install MATLAB.
+### Change directory to cloned directory.
 
 ### Install Python 3.9, if not installed.
-
 ### pip should be automatically installed with Python 3.9, but if not, install pip.
+
+### Download sample data and Stardist-3D models (by running python script) -- probably change google drive link to blastospim link for data
+python3 download_data_and_models.py
+
+### Download and install MATLAB.
+### Learn how to run MATLAB from command line
+https://www.mathworks.com/help/matlab/ref/matlabmacos.html.   [for Mac]
+
+https://www.mathworks.com/help/matlab/ref/matlabwindows.html  [for Windows]
+
+https://www.mathworks.com/help/matlab/ref/matlablinux.html    [for Linux]
+
+Within the Jupyter notebook, you will replace the matlab command by whatever the local path is to that matlab executable on your machine.
+Check that this works by running a matlab command from terminal like:
+matlab -nosplash -nodesktop -r "1+1 == 2; exit"
 
 ## Step 2: Make virtual environment, pip install requirements, & open Jupyter.
 
