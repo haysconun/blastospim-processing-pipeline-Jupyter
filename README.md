@@ -6,14 +6,8 @@
 ### Download code via git clone (from terminal) -- probably port this into an FI or Princeton git repo
 git clone https://github.com/haysconun/blastospim-processing-pipeline-Jupyter
 
-### Change directory to cloned directory.
-cd blastospim-processing-pipeline-Jupyter
-
 ### Install Python 3.9, if not installed.
 ### pip should be automatically installed with Python 3.9, but if not, install pip.
-
-### Download sample data and Stardist-3D models (by running python script) -- probably change google drive link to blastospim link for data
-python3 download_data_and_models.py
 
 ### Download and install MATLAB.
 ### Learn how to run MATLAB from command line
@@ -49,6 +43,12 @@ pip install -r /path/to/requirements_file.txt
 
 ### Separately, pip install pyklb. pyklb may not install correctly on your machine, but this is NOT required. If this install fails, ignore. 
 pip install git+https://github.com/bhoeckendorf/pyklb.git@skbuild
+
+### Change directory to cloned directory.
+cd blastospim-processing-pipeline-Jupyter
+
+### Download sample data and Stardist-3D models (by running python script) -- probably change google drive link to blastospim link for data
+python3 download_data_and_models.py
 
 ### Install Jupyter lab or notebook AND load
 pip install jupyterlab
