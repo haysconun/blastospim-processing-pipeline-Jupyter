@@ -43,8 +43,13 @@ python --version
 ### pip install from requirements file. Replace the /path/to/requirements_file.txt with the path to the requirements in your cloned directory.
 pip install -r /path/to/requirements_file.txt
 
-### Separately, pip install pyklb. pyklb may not install correctly on your machine, but this is NOT required. If this install fails, ignore. 
+### Optional: pip install pyklb. pyklb may not install correctly on your machine, but this is NOT required. If this install fails, ignore. 
 pip install git+https://github.com/bhoeckendorf/pyklb.git@skbuild
+
+### Optional: install visualization code. See https://github.com/AaronWatters/volume_gizmos
+git clone https://github.com/AaronWatters/volume_gizmos
+cd volume_gizmos
+pip install -e .
 
 ### Change directory to cloned directory. Replace path/to/your/blastospim-processing-pipeline-Jupyter with the path to your cloned folder.
 cd path/to/your/blastospim-processing-pipeline-Jupyter
