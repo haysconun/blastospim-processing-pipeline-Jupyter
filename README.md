@@ -33,6 +33,7 @@ https://virtualenv.pypa.io/en/latest/installation.html
 ### In terminal, create a new virtual environment AND check the python version of the virtual environment.
 ### When creating the virtual environment, replace the path /path/to/your/python39/installation with the actual path to your python 3.9 installation.
 virtualenv -p /path/to/your/python39/installation pyenvname_39
+MAYBE REPLACE virtualenv for ease of use
 
 ### Activate your new virtual environment and check python version
 source pyenvname_39/bin/activate
