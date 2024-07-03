@@ -26,6 +26,7 @@ Then, from that directory, run:
 ./matlab -nosplash -nodesktop -r "1+1 == 2; exit"
 
 The way that the single line (in the screenshot) works is: open matlab and passes it a line of code to run and exits (all at once).
+There is a test example in the jupyter notebook below.
 
 ## Step 2: Make virtual environment, pip install requirements, & open Jupyter.
 
