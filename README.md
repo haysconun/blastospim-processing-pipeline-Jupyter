@@ -1,5 +1,6 @@
 
 # BLASTOSPIM Instance Segmentation and Tracking Pipeline (Jupyter notebook) for your own machine (no GPU)
+# Please see below for installation instructions on a machine with GPUs
 
 ## Step 1: Installing MATLAB & Python and downloading sample files
 
@@ -26,11 +27,28 @@ Within the Jupyter notebook, you will replace the matlab command by whatever the
 Check that this works by running a matlab command from terminal like:
 matlab -nosplash -nodesktop -r "1+1 == 2; exit"
 
+For example, on a mac, you will likely have to change directory to your local installation of matlab. --TODO code example
+Then, from that directory, run:
+./matlab -nosplash -nodesktop -r "1+1 == 2; exit"
+
 ## Step 2: Make virtual environment, pip install requirements, & open Jupyter.
 
 ### Install virtualenv, if not already installed.
+https://virtualenv.pypa.io/en/latest/installation.html
 
 ### In terminal, create a new virtual environment AND check the python version of the virtual environment.
+### When creating the virtual environment, replace the path /path/to/your/python39/installation with the actual path to your python 3.9 installation.
+virtualenv -p /path/to/your/python39/installation pyenvname_39
+
+### Activate your new virtual environment and check python version
+source pyenvname_39/bin/activate
+python --version
+
+### pip install from requirements file. Replace the /path/to/requirements_file.txt with the path to the requirements in your cloned directory.
+pip install -r /path/to/requirements_file.txt
+
+### Separately, pip install pyklb. pyklb may not install correctly on your machine, but this is NOT required. If this install fails, ignore. 
+pip install git+https://github.com/bhoeckendorf/pyklb.git@skbuild
 
 ### Install Jupyter lab or notebook AND load
 pip install jupyterlab
@@ -38,7 +56,9 @@ pip install jupyterlab
 ### Open an instance of Jupyter
 jupyter lab
 
-# BLASTOSPIM Instance Segmentation and Tracking Pipeline (Jupyter notebook)
+### Verify
+
+# BLASTOSPIM Instance Segmentation and Tracking Pipeline (Jupyter notebook) for a machine with GPUs
 
 ## Step 1: Installing dependencies and downloading sample files
 
