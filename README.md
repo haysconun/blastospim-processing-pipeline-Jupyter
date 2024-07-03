@@ -45,8 +45,8 @@ pip install -r /path/to/requirements_file.txt
 ### Separately, pip install pyklb. pyklb may not install correctly on your machine, but this is NOT required. If this install fails, ignore. 
 pip install git+https://github.com/bhoeckendorf/pyklb.git@skbuild
 
-### Change directory to cloned directory.
-cd blastospim-processing-pipeline-Jupyter
+### Change directory to cloned directory. Replace path/to/your/blastospim-processing-pipeline-Jupyter with the path to your cloned folder.
+cd path/to/your/blastospim-processing-pipeline-Jupyter
 
 ### Download sample data and Stardist-3D models (by running python script) -- probably change google drive link to blastospim link for data
 python3 download_data_and_models.py
