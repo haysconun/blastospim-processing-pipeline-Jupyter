@@ -3,11 +3,13 @@
 
 ## Step 1: Installing MATLAB & Python and downloading sample files
 
-### Download code via git clone (from terminal) -- TODO: probably make this into an FI or Princeton git repo
+### Download code via git clone (from terminal).
 
 ```
 git clone https://github.com/haysconun/blastospim-processing-pipeline-Jupyter
 ```
+
+TODO: make this into an FI or Princeton git repo.
 
 ### Install Python 3.9 and pip, if not installed.
 Installing any later version of python will likely result in errors during later installation steps.
@@ -87,6 +89,8 @@ cd path/to/your/blastospim-processing-pipeline-Jupyter
 python3 download_data_and_models.py
 ```
 
+TODO: change google drive link to blastospim link for data
+
 ### Install Jupyter lab or notebook AND open jupyter while your virtual environment is activated.
 ```
 pip install jupyterlab
@@ -95,7 +99,8 @@ jupyter lab
 ```
 
 ### Open the jupyter notebook called 'pipeline_notebook.ipynb'
-### Evaluate the cells in the notebook to perform segmentation and tracking on the sample data.
+
+Evaluate the cells in the notebook to perform segmentation and tracking on the sample data.
 
 ### In notebook, replace with appropriate paths.
 
