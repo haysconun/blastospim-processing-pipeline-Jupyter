@@ -1,5 +1,5 @@
 
-function [] = volume_track_nuclei_divisions(config_path)
+function [] = volume_track_nuclei_divisions()
 % This is Masha's version of tracking, to run on early mouse embryos.
 % This code attempts to construct the full lineage tree, 
 % in particular, identify mitotic events.
@@ -11,6 +11,11 @@ function [] = volume_track_nuclei_divisions(config_path)
 % supports hyperthreading/multithreading then set it to 2 x [number of cores]
 numThreads = 4;
 
+[filepath,~,~] = fileparts(mfilename('fullpath'));
+[parentFolder, childFolder] = fileparts(filepath);
+[parentFolder, ~] = fileparts(parentFolder);
+config_path = parentFolder;
+
 %% %%%%% NO CHNAGES BELOW %%%%%%%
 % CPD and Library Setup
 addpath(genpath('../CPD2/core'));
@@ -20,7 +25,6 @@ addpath(genpath('../klb_io/'));
 addpath(genpath('../common/'));
 
 config_opts = ReadYaml(fullfile(config_path,'config.yaml'));
-%output_folder = '/mnt/ceph/users/hnunley/mouse_data_folder_Apr24/test/output/';% where to OUTPUT
 output_folder = config_opts.output_dir;
 
 % REGISTRATION SETUP
@@ -177,7 +181,7 @@ for time_index_index = inds_to_track
 %         end
 %        opt.tol=1e-3;  
         if sigma2>=sigma_thres
-            disp('Trying identity initialization')
+            %disp('Trying identity initialization')
             tform = rigid3d(eye(3), [0,0,0]);
     
             ptCloud2 = pctransform(ptCloud2,tform); % this makes ptCloud a pointCloud
@@ -186,7 +190,7 @@ for time_index_index = inds_to_track
            % [Transform, ~, sigma2]=cpd_register(ptCloud1,ptCloud2,opt);
             [Transform, ~, sigma2]=cpd_register(ptCloud1,ptCloud2Loc,opt);
             if sigma2<sigma_thres
-                disp('save');
+                %disp('save');
                 opt_ptCloud2 = ptCloud2Loc;
             end
         end
@@ -224,7 +228,7 @@ for time_index_index = inds_to_track
             %disp(opt_sigma);
             %disp(sigma_thres);
             if ((sigma2<opt_sigma) || (sigma2<sigma_thres))
-                disp('save');
+                %disp('save');
                 opt_sigma= sigma2;
                 opt_transform = Transform;
                 opt_ptCloud2 = ptCloud2Loc;
@@ -269,10 +273,10 @@ for time_index_index = inds_to_track
         alpha_shape_for_each_label2 = alpha_shape_for_each_label2(tree_inds_from,:);
         iou_matrix = iou_matrix(tree_inds_to, tree_inds_from);
     end
-    disp('Cell_labels_I_care_about1');
-    disp(cell_labels_I_care_about1);
-    disp('Cell_labels_I_care_about2');
-    disp(cell_labels_I_care_about2);
+    %disp('Cell_labels_I_care_about1');
+    %disp(cell_labels_I_care_about1);
+    %disp('Cell_labels_I_care_about2');
+    %disp(cell_labels_I_care_about2);
 
     store_iou_table{time_index_index, 1} = iou_matrix;
     
@@ -283,7 +287,7 @@ for time_index_index = inds_to_track
     [nn_three nd]=kNearestNeighbors(center_point_for_each_label1, center_point_for_each_label2,min(3,size(center_point_for_each_label2, 1)));
     %find bad matches
     nn_orig = nn_three;
-    disp(nn_orig);
+    %disp(nn_orig);
     bad_matches = [];
     to_bad_matches = [];
     dup=find_duplicates(nn_three(:,1));
@@ -302,15 +306,15 @@ for time_index_index = inds_to_track
         end
         %if not a daughter candidate and volume disbalance is present
         if (from_volume<=2/3*to_volume) & (from_volume < vol_thres) & flag
-            disp('Adding both because badly matched one-to-one:');
-            disp('From');
-            disp(cell_labels_I_care_about2(i));
-            disp('To');
-            disp(cell_labels_I_care_about1(to));
-            disp('From_volume');
-            disp(from_volume);
-            disp('To_volume');
-            disp(to_volume);
+%             disp('Adding both because badly matched one-to-one:');
+%             disp('From');
+%             disp(cell_labels_I_care_about2(i));
+%             disp('To');
+%             disp(cell_labels_I_care_about1(to));
+%             disp('From_volume');
+%             disp(from_volume);
+%             disp('To_volume');
+%             disp(to_volume);
 
             bad_matches = [bad_matches,i];
             to_bad_matches = [to_bad_matches,to];
@@ -318,7 +322,7 @@ for time_index_index = inds_to_track
     end
     %disp(bad_matches);
     %disp(to_bad_matches);
-    disp('Going through duplicates now')
+    %disp('Going through duplicates now')
     dup=find_duplicates(nn_three(:,1));
     for lvd=1:size(dup,1)
         from = dup(lvd).ind;
@@ -326,49 +330,49 @@ for time_index_index = inds_to_track
         to_volume = volumes1(cell_labels_I_care_about1(to));
         
         %[k,to_volume] = convhull(alpha_shape_for_each_label1{to,:}.Points);
-        disp('To')
-        disp(cell_labels_I_care_about1(to));
+        %disp('To')
+        %disp(cell_labels_I_care_about1(to));
 
-        disp('To_volume')
-        disp(to_volume);
+        %disp('To_volume')
+        %disp(to_volume);
         daughter_flag = true;
         fv = volumes2(cell_labels_I_care_about2(from));
         num_large = sum(fv>vol_thres);
         if (num_large == 0) | (num_large >1)
-            disp('Daughter candidates or more than two large descendants; adding all:')
-            disp('From');
-            disp(cell_labels_I_care_about2(from));
+            %disp('Daughter candidates or more than two large descendants; adding all:')
+            %disp('From');
+            %disp(cell_labels_I_care_about2(from));
             to_bad_matches = [to_bad_matches,to];
             for j=1:length(from)
                 bad_matches = [bad_matches,from(j)];
             end
         else
-            disp('Exactly one large descendant; adding all the rest:')
-            disp('From');
-            disp(cell_labels_I_care_about2(from));
+            %disp('Exactly one large descendant; adding all the rest:')
+            %disp('From');
+            %disp(cell_labels_I_care_about2(from));
             cells_to_add = from(find(fv<=vol_thres));
             for j=1:length(cells_to_add)
                 bad_matches = [bad_matches,cells_to_add(j)];
             end
         end
     end
-    disp('Adding nuclei with no matches:')
+    %disp('Adding nuclei with no matches:')
     for i=1:size(cell_labels_I_care_about1,1)
         if ~ismember(i, nn_orig(:,1))
-            disp(cell_labels_I_care_about1(i));
+            %disp(cell_labels_I_care_about1(i));
             to_bad_matches = [to_bad_matches,i];
         end
     end
 
     bad_matches = unique(bad_matches);
     to_bad_matches = unique(to_bad_matches);
-    disp('Descendants to be reanalyzed:');
-    disp(bad_matches);
-    disp('Parents to be reanalyzed:');
-    disp(to_bad_matches);
+    %disp('Descendants to be reanalyzed:');
+    %disp(bad_matches);
+    %disp('Parents to be reanalyzed:');
+    %disp(to_bad_matches);
     center1 = center_point_for_each_label1(to_bad_matches,:);
     center2 = center_point_for_each_label2(bad_matches,:);
-    disp('Remapping...');
+    %disp('Remapping...');
     if (size(center1,1)>0)
         [nn_three nd]=kNearestNeighbors(center1, center2,min(3,size(center1,1)));%length(center2)));
     
@@ -378,21 +382,21 @@ for time_index_index = inds_to_track
         alpha2 = alpha_shape_for_each_label2(bad_matches,:);
         if length(nn_three(:,1))~=length(unique(nn_three(:,1))) % Reject duplicate nearest neighbors
             dup=find_duplicates(nn_three(:,1));
-            disp(dup);
+            %disp(dup);
             for lvd=1:size(dup,1)
                 %flag indicates divisions
                 flag = 0;
                 from = dup(lvd).ind;
                 to = dup(lvd).val;
-                disp('To');
-                disp(to);
+                %disp('To');
+                %disp(to);
                 to_cell = center1(to,:);
                 %disp(alpha1(to,:));
-                disp('To_volume');
+                %disp('To_volume');
                 to_volume = volumes1(cell_labels_I_care_about1(to_bad_matches(to)));
-                disp(to_volume);
-                disp('From');
-                disp(from);
+                %disp(to_volume);
+                %disp('From');
+                %disp(from);
                 daughter_flag = true;
                 for i=1:length(from)
                     %disp(i);
@@ -400,10 +404,10 @@ for time_index_index = inds_to_track
                     %disp(to);
                     fv = volumes2(cell_labels_I_care_about2(bad_matches(from(i))));
             
-                    disp(fv);
+                    %disp(fv);
                     if fv>2/3*to_volume
                         daughter_flag = false;
-                        disp('One of the daughters is too large');
+                        %disp('One of the daughters is too large');
                     end
                 end
                 if (dup(lvd).length==2) & daughter_flag
@@ -416,21 +420,21 @@ for time_index_index = inds_to_track
                     dist_cent = vecnorm(center-to_cell);
                     if ((dist_1>dist_thres)&(dist_2>dist_thres)&(dist_cent<dist_cent_thres))
                         flag = 1;
-                        disp('found a pair');
-                        disp(dist_1);
-                        disp(dist_2);
-                        disp(to_cell);
-                        disp(from_cell_2);
-                        disp(center);
+                        %disp('found a pair');
+                        %disp(dist_1);
+                        %disp(dist_2);
+                        %disp(to_cell);
+                        %disp(from_cell_2);
+                        %disp(center);
     
                     end
                 end
                 %if not daughters resolve conflicts using second nearest
                 %neighbors
                 if (flag == 0) & (size(nn_three,2)>1)
-                    disp('Flag is zero, resolving conflicts');
-                    disp(from);
-                    disp(nn_three(from,2));
+                    %disp('Flag is zero, resolving conflicts');
+                    %disp(from);
+                    %disp(nn_three(from,2));
                     [ic,ia,ib]=intersect(nn_three(from,2),setdiff(1:size(nn_three,1),nn_three(:,1)));
                     %disp(ic);s
                     %disp(ia);
@@ -462,14 +466,14 @@ for time_index_index = inds_to_track
         nn_three = NaN*zeros(length(bad_matches),1);
     end
     nn=nn_orig(:,1);
-    disp(nn);
+    %disp(nn);
     good_inds = nn_three(~isnan(nn_three(:,1)),1);
     nn(bad_matches(~isnan(nn_three(:,1))),1) = to_bad_matches(good_inds);
     nn(bad_matches(isnan(nn_three(:,1))),1) = NaN;
     %nn = nn_three(:,1);
     %nd=nd(:,1);
-    disp('Final matching:')
-    disp(nn(:,1));
+    %disp('Final matching:')
+    %disp(nn(:,1));
     color_vec = [];
     color_map_setting = [1 0 0; 0 0 1];
     sample_graph = graph;
@@ -581,7 +585,7 @@ for time_index_index = inds_to_track
     % sc_plot = scatter3(missing_nodes,'xpos','ypos','zpos', 'filled', ...
     %     'Marker','^', 'MarkerFaceColor','#EDB120');
     % sc_plot.SizeData = 150;
-    disp(time_index);
+    % disp(time_index);
 
     % % DISPLAY CURRENT TIME INDEX (just to make sure that calculation is not stalled).
     % f3 = figure; f3.Position = [300 450 plot_width plot_height];
@@ -597,7 +601,6 @@ for time_index_index = inds_to_track
     save(next_graph_file, 'G_based_on_nn');
     disp('time index');
     disp(time_index);
-    %pause;
 end
 
 % Save vector of transformations...
