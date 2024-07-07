@@ -24,10 +24,15 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function [] = Registration_Centroids(config_path)
+function [] = Registration_Centroids()
 % Set numThreads to the number of cores in your computer. If your processor
 % supports hyperthreading/multithreading then set it to 2 x [number of cores]
 numThreads = 4;
+
+[filepath,~,~] = fileparts(mfilename('fullpath'));
+[parentFolder, childFolder] = fileparts(filepath);
+[parentFolder, ~] = fileparts(parentFolder);
+config_path = parentFolder;
 
 %%  %%%%% NO CHNAGES BELOW %%%%%%%
 
