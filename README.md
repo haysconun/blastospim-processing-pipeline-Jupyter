@@ -105,8 +105,10 @@ https://www.mathworks.com/help/matlab/ref/matlablinux.html    [for Linux]
 
 ### In notebook, Cell 7 is a reminder to open the config.yaml from within the Jupyter interface and ensure the settings there are correct for registration and tracking.
 
+TODO: point out where results of segmentation and tracking are saved.
+TODO: Enable some limited visualization of these results within the Jupyter notebook
 
-### Potential issue: setup CPD
+### Note potential issue for Cell 8: setup CPD
 
 If running the lineage construction script fails because of an error with respect to compilation of code. See below.
 
@@ -123,4 +125,5 @@ cpd_make
 ## Correction of segmentation and tracking
 
 See documentation of ImageJ plugin tool AnnotatorJ version 1.6 ( https://github.com/PrincetonUniversity/blastospim-processing-pipeline ).
-Tree correction tool -- Aaron's?
+
+Tree visualization and correction tool -- Aaron's?
