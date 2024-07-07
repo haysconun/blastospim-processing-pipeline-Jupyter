@@ -138,7 +138,7 @@ You need a cuda-capable device GPU for this notebook.
 
 This assumes that you have installed requirements as outlined in the steps above.
 
-cuda 11.8
+cuda 11.2 or 11.8
 
 cudnn/8.9.2.26-11.x
 
