@@ -1,5 +1,5 @@
 
-# BLASTOSPIM Instance Segmentation and Tracking Pipeline (Jupyter notebook running on CPU)
+# BLASTOSPIM Segmentation and Tracking Pipeline (Jupyter notebook running on CPU)
 
 ## Step 1: Installing MATLAB & Python and downloading sample files
 
