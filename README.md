@@ -140,6 +140,8 @@ This assumes that you have installed requirements as outlined in the steps above
 
 cuda 11.2 or 11.8
 
-cudnn/8.9.2.26-11.x
+cudnn/8.9.2.26-11.x (ignore)
+
+cudnn 8.2 or 8.4
 
 tensorflow 2.10.0 or 2.11.1
