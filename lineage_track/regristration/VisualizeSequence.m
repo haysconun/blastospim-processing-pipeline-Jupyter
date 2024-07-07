@@ -3,18 +3,24 @@
 % using sequence of registration transforms
 % put all label images in same reference frame
 
-function [] = VisualizeSequence( config_path )
+function [] = VisualizeSequence( )
 
 % Set numThreads to the number of cores in your computer. If your processor
 % supports hyperthreading/multithreading then set it to 2 x [number of cores]
 numThreads = 4;
 
+[filepath,~,~] = fileparts(mfilename('fullpath'));
+[parentFolder, childFolder] = fileparts(filepath);
+[parentFolder, ~] = fileparts(parentFolder);
+config_path = parentFolder;
+
 %% %%%%% NO CHNAGES BELOW %%%%%%%
 addpath(genpath('../YAMLMatlab_0.4.3'));
 addpath(genpath('../CPD2/core'));
 addpath(genpath('../CPD2/data'));
+addpath(genpath('../common'));
 config_opts = ReadYaml(fullfile(config_path,'config.yaml'));
-output_folder = '/mnt/ceph/users/hnunley/mouse_data_folder_Apr24/test/output/';% where to OUTPUT
+output_folder = config_opts.output_dir;
 
 if config_opts.register_begin_frame == 0
     firstTime = 1;
@@ -36,7 +42,7 @@ end
 % xlabel('Frame');
 % ylabel('Registration Sigma ');
 time_s_mat = [(firstTime:lastTime)', s(firstTime:lastTime)'];
-writematrix(time_s_mat, [output_folder, 'error_matrix.csv']);
+writematrix(time_s_mat, [output_folder, '/error_matrix.csv']);
 
 %%
 %% ANISOTROPY HARD-CODED
@@ -144,7 +150,7 @@ for time_index_index = firstTime:lastTime
         combined_mat(1:size(Transform.Y,1),(size(newX,2)+1):end) = Transform.Y;
         %combined_mat = [newX,Transform.Y];
     end
-    writematrix(combined_mat, [output_folder, 'combined_mat_',num2str(time_index_index,'%05.3d'),'_',num2str(time_index_plus_1,'%05.3d'),'.csv']);
+    writematrix(combined_mat, [output_folder, '/combined_mat_',num2str(time_index_index,'%05.3d'),'_',num2str(time_index_plus_1,'%05.3d'),'.csv']);
     disp(size(combined_mat));
     disp(time_index_index);
 
