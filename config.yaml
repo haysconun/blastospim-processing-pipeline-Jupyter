@@ -1,13 +1,14 @@
 ###YAML config file for image registration and lineage tracking 
 
 # What is the path and the prefix for the embryo names?
-data_path: '/mnt/home/hnunley/revised_code_for_pipeline/data/small_Corrected_Segmentation'
+
+data_path: '/Users/hnunley/Pictures/blastospim-processing-pipeline-Jupyter/data/small_Corrected_Segmentation'
 name_of_embryo: 'klbOut_Cam_Long_'
 suffix_for_embryo: '.lux.label.tif'
 suffix_for_embryo_alternative: '.lux_SegmentationCorrected.tif'
 
 # Output Directory
-output_dir: '/mnt/home/hnunley/revised_code_for_pipeline/data/Expected_Track'
+output_dir: '/Users/hnunley/Pictures/blastospim-processing-pipeline-Jupyter/data/Expected_Track'
 
 # Registeration Options
 register_begin_frame: 15 # Begin with 1 for Lisa's Registration, 0 otherwise. Start with 1 for tracking
