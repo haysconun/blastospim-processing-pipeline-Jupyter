@@ -134,5 +134,12 @@ Tree visualization and correction tool -- Aaron's?
 
 # Training BlastoSPIM-trained models on other Ground-truth Datasets (Jupyter notebook running on GPU)
 
+You need a cuda-capable device GPU for this notebook.
+
 This assumes that you have installed requirements as outlined in the steps above.
 
+cuda 11.8
+
+cudnn/8.9.2.26-11.x
+
+tensorflow 2.10.0 or 2.11.1
