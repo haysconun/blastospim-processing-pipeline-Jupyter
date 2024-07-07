@@ -122,6 +122,10 @@ cpd_make
 
 *On MAC OSX you will need to install Xcode from the App store and run Xcode once to accept the license aggrement.*
 
+### Note potential issue
+
+This has only been tested for mac and linux machines.
+
 ## Correction of segmentation and tracking
 
 See documentation of ImageJ plugin tool AnnotatorJ version 1.6 ( https://github.com/PrincetonUniversity/blastospim-processing-pipeline ).
