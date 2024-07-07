@@ -102,7 +102,13 @@ jupyter lab
 
 Evaluate the cells in the notebook to perform segmentation and tracking on the sample data.
 
-### In notebook, replace with appropriate paths.
+### In notebook, in the first cell, replace /path/to/your/blastospim-processing-pipeline-Jupyter/ with your specific path
+```
+path_to_code = '/path/to/your/blastospim-processing-pipeline-Jupyter/'
+```
+
+TODO: minimize number of specified paths
+TODO: suppress output from the volume_track_nuclei_divisions code 
 
 
 ### Potential issue: setup CPD
