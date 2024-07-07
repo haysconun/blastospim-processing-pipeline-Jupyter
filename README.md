@@ -11,33 +11,12 @@ git clone https://github.com/haysconun/blastospim-processing-pipeline-Jupyter
 
 TODO: make this into an FI or Princeton git repo.
 
-### Install Python 3.9 and pip, if not installed.
-Installing any later version of python will likely result in errors during later installation steps.
+### Install Python 3.9, pip, and MATLAB.
+Noe: Installing any other version of python will likely result in errors during subsequent installation steps.
 
-pip should be automatically installed with Python 3.9, but if not, install pip.
+pip should be automatically installed with Python 3.9, but if it is not, install pip.
 
-### Download and install MATLAB.
-Learn how to run MATLAB from terminal.
-
-https://www.mathworks.com/help/matlab/ref/matlabmacos.html.   [for Mac]
-
-https://www.mathworks.com/help/matlab/ref/matlablinux.html    [for Linux]
-
-Within the Jupyter notebook, you will replace the matlab command by whatever the local path is to that matlab executable on your machine.
-Check that this works by running a matlab command from terminal like:
-
-```
-matlab -nosplash -nodesktop -r "1+1 == 2; exit"
-```
-
-For example, on a mac, you will likely have to change directory to your local installation of matlab.
-Then, from that directory, run:
-
-```
-./matlab -nosplash -nodesktop -r "1+1 == 2; exit"
-```
-
-There is a test example in the jupyter notebook.
+Download and install MATLAB.
 
 ## Step 2: Make virtual environment, pip install the requirements file, & open Jupyter.
 
@@ -102,12 +81,30 @@ jupyter lab
 
 Evaluate the cells in the notebook to perform segmentation and tracking on the sample data.
 
-### In notebook, in the first cell, replace /path/to/your/blastospim-processing-pipeline-Jupyter/ with your specific path
+### In notebook, in Cell 1, replace /path/to/your/blastospim-processing-pipeline-Jupyter/ with your specific path
 ```
 path_to_code = '/path/to/your/blastospim-processing-pipeline-Jupyter/'
 ```
 
-TODO: minimize number of specified paths
+### In notebook, in Cell 6, replace the call to MATLAB with the appropriate call for your operating system
+```
+!/Applications/MATLAB_R2022a.app/bin/matlab -nosplash -nodesktop -r "1+1 == 2; exit"
+```
+
+For Linux, you should be able to replace /Applications/MATLAB_R2022a.app/bin/matlab with matlab.
+
+For mac, you should replace /Applications/MATLAB_R2022a.app/bin/matlab with the location of the matlab installation on your machine.
+
+In cells 8-9, replace the matlab calls accordingly.
+
+See links below for guidance:
+
+https://www.mathworks.com/help/matlab/ref/matlabmacos.html.   [for Mac]
+
+https://www.mathworks.com/help/matlab/ref/matlablinux.html    [for Linux]
+
+### In notebook, Cell 7 is a reminder to open the config.yaml from within the Jupyter interface and ensure the settings there are correct for registration and tracking.
+
 
 ### Potential issue: setup CPD
 
