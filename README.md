@@ -63,7 +63,7 @@ pip install -e .
 cd path/to/your/blastospim-processing-pipeline-Jupyter
 ```
 
-### Download sample data and Stardist-3D models (by running python script) -- probably change google drive link to blastospim link for data
+### Download sample data and Stardist-3D models (by running python script).
 ```
 python3 download_data_and_models.py
 ```
