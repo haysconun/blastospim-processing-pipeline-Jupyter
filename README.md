@@ -15,7 +15,8 @@ Installing any later version of python will likely result in errors during later
 pip should be automatically installed with Python 3.9, but if not, install pip.
 
 ### Download and install MATLAB.
-Learn how to run MATLAB from terminal
+Learn how to run MATLAB from terminal.
+
 https://www.mathworks.com/help/matlab/ref/matlabmacos.html.   [for Mac]
 
 https://www.mathworks.com/help/matlab/ref/matlablinux.html    [for Linux]
