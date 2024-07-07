@@ -132,5 +132,5 @@ See documentation of ImageJ plugin tool AnnotatorJ version 1.6 ( https://github.
 
 Tree visualization and correction tool -- Aaron's?
 
-# BLASTOSPIM Training and Evaluation (Jupyter notebook running on GPU)
+# Training BlastoSPIM models on other Ground-truth Datasets (Jupyter notebook running on GPU)
 
