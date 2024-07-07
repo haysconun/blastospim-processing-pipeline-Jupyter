@@ -134,3 +134,5 @@ Tree visualization and correction tool -- Aaron's?
 
 # Training BlastoSPIM-trained models on other Ground-truth Datasets (Jupyter notebook running on GPU)
 
+This assumes that you have installed requirements as outlined in the steps above.
+
