@@ -127,3 +127,6 @@ cpd_make
 See documentation of ImageJ plugin tool AnnotatorJ version 1.6 ( https://github.com/PrincetonUniversity/blastospim-processing-pipeline ).
 
 Tree visualization and correction tool -- Aaron's?
+
+# BLASTOSPIM Finetuning and Evaluation (Jupyter notebook running on GPU)
+
