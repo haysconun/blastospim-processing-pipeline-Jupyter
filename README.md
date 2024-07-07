@@ -108,8 +108,6 @@ path_to_code = '/path/to/your/blastospim-processing-pipeline-Jupyter/'
 ```
 
 TODO: minimize number of specified paths
-TODO: suppress output from the volume_track_nuclei_divisions code 
-
 
 ### Potential issue: setup CPD
 
@@ -125,3 +123,7 @@ cpd_make
 
 *On MAC OSX you will need to install Xcode from the App store and run Xcode once to accept the license aggrement.*
 
+## Correction of segmentation and tracking
+
+See documentation of ImageJ plugin tool AnnotatorJ version 1.6 ( https://github.com/PrincetonUniversity/blastospim-processing-pipeline ).
+Tree correction tool -- Aaron's?
