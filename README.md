@@ -4,7 +4,10 @@
 ## Step 1: Installing MATLAB & Python and downloading sample files
 
 ### Download code via git clone (from terminal) -- TODO: probably make this into an FI or Princeton git repo
+
+```
 git clone https://github.com/haysconun/blastospim-processing-pipeline-Jupyter
+```
 
 ### Install Python 3.9 and pip, if not installed.
 Installing any later version of python will likely result in errors during later installation steps.
@@ -20,11 +23,17 @@ https://www.mathworks.com/help/matlab/ref/matlablinux.html    [for Linux]
 
 Within the Jupyter notebook, you will replace the matlab command by whatever the local path is to that matlab executable on your machine.
 Check that this works by running a matlab command from terminal like:
+
+```
 matlab -nosplash -nodesktop -r "1+1 == 2; exit"
+```
 
 For example, on a mac, you will likely have to change directory to your local installation of matlab.
 Then, from that directory, run:
+
+```
 ./matlab -nosplash -nodesktop -r "1+1 == 2; exit"
+```
 
 There is a test example in the jupyter notebook.
 
@@ -34,40 +43,56 @@ There is a test example in the jupyter notebook.
 In terminal, create a new virtual environment.
 Replace path/to/venv below with your chosen path and name of your virtual environment -- this will create a new folder.
 
+```
 python3.9 -m venv path/to/venv
+```
 
 ### Activate your virtual environment and check python version.
 The command below activates your python environment. Replace path/to/venv below with your chosen path and name of your virtual environment.
 
+```
 source path/to/venv/bin/activate
 
 python --version
+```
 
 ### pip install from requirements file. Replace the /path/to/requirements_file.txt with the path to the requirements in your cloned directory.
+```
 pip install -r /path/to/requirements_file.txt
+```
 
 ### Optional install: pip install pyklb.
+```
 pip install git+https://github.com/bhoeckendorf/pyklb.git@skbuild
+```
 
 Note: pyklb may not install correctly on your machine, but this is only required for reading and writing images in the klb format.
 
 ### Optional install: visualization code. See https://github.com/AaronWatters/volume_gizmos for more details.
+```
 git clone https://github.com/AaronWatters/volume_gizmos
 
 cd volume_gizmos
 
 pip install -e .
+```
 
 ### Change directory to cloned directory. Replace path/to/your/blastospim-processing-pipeline-Jupyter with the path to your cloned folder.
+```
 cd path/to/your/blastospim-processing-pipeline-Jupyter
+```
 
 ### Download sample data and Stardist-3D models (by running python script) -- probably change google drive link to blastospim link for data
+```
 python3 download_data_and_models.py
+```
 
 ### Install Jupyter lab or notebook AND open jupyter while your virtual environment is activated.
+```
 pip install jupyterlab
 
 jupyter lab
+```
 
 ### Open the jupyter notebook called 'pipeline_notebook.ipynb'
 ### Evaluate the cells in the notebook to perform segmentation and tracking on the sample data.
