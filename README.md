@@ -93,9 +93,9 @@ path_to_code = '/path/to/your/blastospim-processing-pipeline-Jupyter/'
 
 For Linux, you should be able to replace /Applications/MATLAB_R2022a.app/bin/matlab with matlab.
 
-For mac, you should replace /Applications/MATLAB_R2022a.app/bin/matlab with the location of the matlab installation on your machine.
+For mac, you should replace /Applications/MATLAB_R2022a.app/bin/matlab with the path to the matlab installation on your machine.
 
-In cells 8-9, replace the matlab calls accordingly.
+For the rest of the matlab calls, replace /Applications/MATLAB_R2022a.app/bin/matlab accordingly.
 
 See links below for guidance:
 
