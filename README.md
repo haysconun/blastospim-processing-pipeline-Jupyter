@@ -138,10 +138,14 @@ You need a cuda-capable device GPU for this notebook.
 
 This assumes that you have installed requirements as outlined in the steps above.
 
-cuda 11.2 or 11.8
+module load modules/2.2-20230808
 
-cudnn/8.9.2.26-11.x (ignore)
+module load gcc/11.4.0 python3
 
-cudnn 8.2 or 8.4
+module load slurm cuda/11.8.0 cudnn/8.9.2.26-11.x
 
-tensorflow 2.10.0 or 2.11.1
+source /mnt/home/hnunley/pyenvname_blastospim_39/bin/activate
+
+module load jupyter-kernels
+
+python -m make-custom-kernel jul8_again
