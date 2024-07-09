@@ -181,7 +181,7 @@ module load jupyter-kernels
 python -m make-custom-kernel kernel_name_finetune
 ```
 
-### Open jupyter hub and request gpu
+### Open jupyter hub, request gpu, and choose kernel
 
 Load from your internet browser 
 
