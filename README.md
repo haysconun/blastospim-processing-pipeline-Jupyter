@@ -145,18 +145,55 @@ TODO: Enable some limited visualization of the tracking within the Jupyter noteb
 
 # Training BlastoSPIM-trained models on other Ground-truth Datasets (Jupyter notebook running on GPU)
 
-You need a cuda-capable device GPU for this notebook.
+## WARNING: install procedure depends on configuration of your university / institute's computing environment
 
-This assumes that you have installed requirements as outlined in the steps above.
+You need a device with cuda-capable GPU(s) for this fine-tuning notebook.
 
+This assumes that you have installed requirements as outlined in the steps above (pip installing requirements).
+
+The commands below specify how a jupyter notebook is run on the Flatiron cluster (rusty). 
+
+Because it is not possible to predict how other clusters might manage their jupyter environments (via JupyterHub), these Flatiron-specific steps are not meant to be totally prescriptive. Instead, they are meant to guide the user to consult their own university / institute's documentation for running Jupyter notebooks on GPUs.
+
+If the user is unable to launch Jupyter lab on a machine with GPU(s), the user should consult our other documentation (ADD HERE) for how to train neural networks via SLURM script (using sbatch).
+
+## Guide to loading jupyter notebook properly on Flatiron Cluster
+
+```
 module load modules/2.2-20230808
 
 module load gcc/11.4.0 python3
 
 module load slurm cuda/11.8.0 cudnn/8.9.2.26-11.x
+```
 
-source /mnt/home/hnunley/pyenvname_blastospim_39/bin/activate
+### Replace path/to/venv below with your chosen path and name of your virtual environment!!
+
+```
+source path/to/venv/bin/activate
 
 module load jupyter-kernels
+```
 
-python -m make-custom-kernel jul8_again
+### Replace kernel_name_finetune with the chosen name of your kernel.
+
+```
+python -m make-custom-kernel kernel_name_finetune
+```
+
+### Open jupyter hub and request gpu
+
+Load from your internet browser 
+
+```
+https://jupyter.flatironinstitute.org/
+```
+
+For the environment, select "jupyterlab (modules/2.2)".
+
+For the job, select "gpu node (4 hours)".
+
+Click Start.
+
+Choose the kernel you made above ( with the make-custom-kernel command ).
+
