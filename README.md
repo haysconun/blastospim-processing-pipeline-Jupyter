@@ -147,6 +147,9 @@ TODO: Enable some limited visualization of the tracking within the Jupyter noteb
 
 ## WARNING: install procedure depends on configuration of your university / institute's computing environment
 
+TODO: insert link for CUDA setup
+TODO: set up via conda -- Cellpose docu suggests it is easier to enforce right CUDA version, etc.
+
 You need a device with cuda-capable GPU(s) for this fine-tuning notebook.
 
 This assumes that you have installed requirements as outlined in the steps above (pip installing requirements).
