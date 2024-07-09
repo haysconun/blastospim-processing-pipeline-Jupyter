@@ -49,7 +49,7 @@ pip install git+https://github.com/bhoeckendorf/pyklb.git@skbuild
 
 Note: pyklb may not install correctly on your machine, but this is only required for reading and writing images in the klb format.
 
-### Optional install: visualization code. See https://github.com/AaronWatters/volume_gizmos for more details.
+### Optional install: visualization code. See [here](https://github.com/AaronWatters/volume_gizmos) for more details.
 ```
 git clone https://github.com/AaronWatters/volume_gizmos
 
