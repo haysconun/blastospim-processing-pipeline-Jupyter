@@ -164,10 +164,13 @@ TODO: insert python script which can be run to download data from google drive
 ## Copy model you would like to finetune (assuming you have already downloaded our models above).
 
 TODO: insert example copy command
+TODO: or redownload model with new name
 
 ## Download jupyter notebooks for finetuning and evaluating
 
 TODO: These will actually be included in this same git repo. (both the finetuning and evaluating)
+TODO: Probably include MakeTrainSet function
+TODO: Put these codes in their own directory in git repo
 
 ##
 
