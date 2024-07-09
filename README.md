@@ -159,6 +159,14 @@ If the user is unable to launch Jupyter lab to run on a machine with GPU(s), the
 
 ## Download sample data for training.
 
+```
+source path/to/venv/bin/activate
+
+cd path/to/your/blastospim-processing-pipeline-Jupyter
+
+python3 download_data_and_models_for_finetune.py
+```
+
 TODO: insert python script which can be run to download data from google drive
 
 ## Copy model you would like to finetune (assuming you have already downloaded our models above).
