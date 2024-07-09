@@ -157,7 +157,7 @@ Because it is not possible to predict how other universities / institutes might 
 
 If the user is unable to launch Jupyter lab to run on a machine with GPU(s), the user should consult our other documentation (ADD LINK HERE) for how to train neural networks via SLURM script (using sbatch).
 
-## Download smaple data for training.
+## Download sample data for training.
 
 TODO: insert python script which can be run to download data from google drive
 
