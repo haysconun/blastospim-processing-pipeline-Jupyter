@@ -153,9 +153,9 @@ This assumes that you have installed requirements as outlined in the steps above
 
 The commands below specify how a jupyter notebook is run on the Flatiron cluster (rusty). 
 
-Because it is not possible to predict how other clusters might manage their jupyter environments (via JupyterHub), these Flatiron-specific steps are not meant to be totally prescriptive. Instead, they are meant to guide the user to consult their own university / institute's documentation for running Jupyter notebooks on GPUs.
+Because it is not possible to predict how other universities / institutes might manage their jupyter environments (for example, via JupyterHub), these Flatiron-specific steps are not meant to be totally prescriptive. Instead, they are meant to guide the user to consult their own university / institute's documentation for running Jupyter notebooks on GPUs.
 
-If the user is unable to launch Jupyter lab on a machine with GPU(s), the user should consult our other documentation (ADD HERE) for how to train neural networks via SLURM script (using sbatch).
+If the user is unable to launch Jupyter lab on a machine with GPU(s), the user should consult our other documentation (ADD LINK HERE) for how to train neural networks via SLURM script (using sbatch).
 
 ## Guide to loading jupyter notebook properly on Flatiron Cluster
 
@@ -195,5 +195,9 @@ For the job, select "gpu node (4 hours)".
 
 Click Start.
 
-Choose the kernel you made above ( with the make-custom-kernel command ).
+Open the jupyter notebook for finetuning.
+
+Choose the kernel you made above ( see the make-custom-kernel command above ) in the top right.
+
+Evaluate the cells to fine-tune on an example dataset.
 
