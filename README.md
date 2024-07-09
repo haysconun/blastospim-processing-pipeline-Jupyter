@@ -226,3 +226,5 @@ Choose the kernel you made above ( see the make-custom-kernel command above ) in
 
 Evaluate the cells to fine-tune on an example dataset.
 
+TODO: put back in augmentation ( problem with pyimgaug3d )
+
