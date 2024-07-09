@@ -86,6 +86,8 @@ Evaluate the cells in the notebook to perform segmentation and tracking on the s
 path_to_code = '/path/to/your/blastospim-processing-pipeline-Jupyter/'
 ```
 
+### Optional: In notebook, in Cell 5, replace the timepoint = '24' with your chosen time index to display.
+
 ### In notebook, in Cell 6, replace the call to MATLAB with the appropriate call for your operating system
 ```
 !/Applications/MATLAB_R2022a.app/bin/matlab -nosplash -nodesktop -r "1+1 == 2; exit"
@@ -105,8 +107,17 @@ https://www.mathworks.com/help/matlab/ref/matlablinux.html    [for Linux]
 
 ### In notebook, Cell 7 is a reminder to open the config.yaml from within the Jupyter interface and ensure the settings there are correct for registration and tracking.
 
-TODO: point out where results of segmentation and tracking are saved.
-TODO: Enable some limited visualization of these results within the Jupyter notebook
+output_dir specifies where the results are written out.
+
+After the full notebook is run, the file ending in '_graph.mat' saves the lineage tree.
+
+'combined_mat_..._....csv' saves aligned point clouds from consecutive timepoints.
+
+'node_info_..._....csv' show nuclear centroids (aligned from timepoint to consecutive timepoint).
+
+'test_transforms.json' saves information about the rigid transformation estimated during registration (from timepoint to consecutive timepoint).
+
+TODO: Enable some limited visualization of the tracking within the Jupyter notebook
 
 ### Note potential issue for Cell 8: setup CPD
 
