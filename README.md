@@ -135,13 +135,13 @@ This loads results from Cell 9.
 
 This has only been tested for mac and linux machines.
 
-TODO: Enable some limited visualization of the tracking within the Jupyter notebook
-
 ## Correction of segmentation and tracking
 
 See documentation of ImageJ plugin tool AnnotatorJ version 1.6 ( https://github.com/PrincetonUniversity/blastospim-processing-pipeline ).
 
 Tree visualization and correction tool -- Aaron's?
+
+TODO: Enable some limited visualization of the tracking within the Jupyter notebook
 
 # Training BlastoSPIM-trained models on other Ground-truth Datasets (Jupyter notebook running on GPU)
 
