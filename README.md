@@ -137,7 +137,7 @@ This has only been tested for mac and linux machines.
 
 ## Correction of segmentation and tracking
 
-See documentation of ImageJ plugin tool AnnotatorJ version 1.6 ( https://github.com/PrincetonUniversity/blastospim-processing-pipeline ).
+See documentation of ImageJ plugin tool AnnotatorJ version 1.6 ( see [here](https://github.com/PrincetonUniversity/blastospim-processing-pipeline) ).
 
 Tree visualization and correction tool -- Aaron's?
 
@@ -146,9 +146,6 @@ TODO: Enable some limited visualization of the tracking within the Jupyter noteb
 # Training BlastoSPIM-trained models on other Ground-Truth Datasets (Jupyter notebook running on GPU)
 
 ## WARNING: install procedure depends on configuration of your university / institute's computing environment
-
-TODO: insert link for CUDA setup
-TODO: set up via conda -- Cellpose docu suggests it is easier to enforce right CUDA version, etc.
 
 You need a device with cuda-capable GPU(s) for this fine-tuning notebook.
 
@@ -163,6 +160,8 @@ Because it is not possible to predict how other universities / institutes might 
 If the user is unable to launch Jupyter lab to run on a machine with GPU(s), the user should consult our other documentation (ADD LINK HERE) for how to train neural networks via SLURM script (using sbatch).
 
 TODO: python version of code for fine-tuning
+
+TODO: might be easier to offer set up via conda -- Cellpose docu suggests it is easier to enforce right CUDA version, etc.
 
 ## Download sample data and models for training.
 
