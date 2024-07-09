@@ -157,6 +157,20 @@ Because it is not possible to predict how other universities / institutes might 
 
 If the user is unable to launch Jupyter lab on a machine with GPU(s), the user should consult our other documentation (ADD LINK HERE) for how to train neural networks via SLURM script (using sbatch).
 
+## Download smaple data for training.
+
+TODO: insert python script which can be run to download data from google drive
+
+## Copy model you would like to finetune (assuming you have already downloaded our models above).
+
+TODO: insert example copy command
+
+## Download jupyter notebooks for finetuning and evaluating
+
+TODO: These will actually be included in this same git repo. (both the finetuning and evaluating)
+
+##
+
 ## Guide to loading jupyter notebook properly on Flatiron Cluster
 
 ```
