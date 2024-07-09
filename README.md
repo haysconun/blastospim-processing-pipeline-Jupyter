@@ -117,8 +117,6 @@ After the full notebook is run, the file ending in '_graph.mat' saves the lineag
 
 'test_transforms.json' saves information about the rigid transformation estimated during registration (from timepoint to consecutive timepoint).
 
-TODO: Enable some limited visualization of the tracking within the Jupyter notebook
-
 ### Note potential issue for Cell 8: setup CPD
 
 If running the lineage construction script fails because of an error with respect to compilation of code. See below.
@@ -133,9 +131,17 @@ cpd_make
 
 *On MAC OSX you will need to install Xcode from the App store and run Xcode once to accept the license aggrement.*
 
+### Cells 10, 11 (OPTIONAL): visualize 3D point clouds for two adjacent timepoints
+
+Specify timeindex1, the first time index in a pair of consecutive frames.
+
+This loads results from Cell 9.
+
 ### Note potential issue
 
 This has only been tested for mac and linux machines.
+
+TODO: Enable some limited visualization of the tracking within the Jupyter notebook
 
 ## Correction of segmentation and tracking
 
