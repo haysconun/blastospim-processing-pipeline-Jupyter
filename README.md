@@ -157,7 +157,7 @@ Because it is not possible to predict how other universities / institutes might 
 
 If the user is unable to launch Jupyter lab to run on a machine with GPU(s), the user should consult our other documentation (ADD LINK HERE) for how to train neural networks via SLURM script (using sbatch).
 
-## Download sample data for training.
+## Download sample data and models for training.
 
 ```
 source path/to/venv/bin/activate
@@ -167,20 +167,17 @@ cd path/to/your/blastospim-processing-pipeline-Jupyter
 python3 download_data_and_models_for_finetune.py
 ```
 
-TODO: insert python script which can be run to download data from google drive
+2022_64x256x256_Platynereis contain the example data for finetuning the model.
 
-## Copy model you would like to finetune (assuming you have already downloaded our models above).
+models_for_finetuning contain copies of our models (for training them further on the Platynereis data.
 
-TODO: insert example copy command
-TODO: or redownload model with new name
+data_for_evaluating_finetune contains other Platynereis ground-truth data for evaluating the models.
 
 ## Download jupyter notebooks for finetuning and evaluating
 
 TODO: These will actually be included in this same git repo. (both the finetuning and evaluating)
 TODO: Probably include MakeTrainSet function
 TODO: Put these codes in their own directory in git repo
-
-##
 
 ## Guide to loading jupyter notebook properly on Flatiron Cluster
 
