@@ -99,12 +99,6 @@ For mac, you should replace /Applications/MATLAB_R2022a.app/bin/matlab with the 
 
 For the rest of the matlab calls, replace /Applications/MATLAB_R2022a.app/bin/matlab accordingly.
 
-See links below for guidance:
-
-https://www.mathworks.com/help/matlab/ref/matlabmacos.html.   [for Mac]
-
-https://www.mathworks.com/help/matlab/ref/matlablinux.html    [for Linux]
-
 ### In notebook, Cell 7 is a reminder to open the config.yaml from within the Jupyter interface and ensure the settings there are correct for registration and tracking.
 
 output_dir specifies where the results are written out.
