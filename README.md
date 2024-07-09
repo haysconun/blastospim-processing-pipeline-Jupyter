@@ -152,6 +152,8 @@ TODO: set up via conda -- Cellpose docu suggests it is easier to enforce right C
 
 You need a device with cuda-capable GPU(s) for this fine-tuning notebook.
 
+To install the NVIDIA driver for your GPU, see [here](https://www.nvidia.com/Download/index.aspx?lang=en-us) to download it. Also install the CUDA toolkit (by choosing one of the 11.x releases [here](https://developer.nvidia.com/cuda-toolkit-archive)).
+
 This assumes that you have installed requirements as outlined in the steps above (pip installing requirements).
 
 The commands below specify how a jupyter notebook is run on the Flatiron cluster (rusty). 
@@ -159,6 +161,8 @@ The commands below specify how a jupyter notebook is run on the Flatiron cluster
 Because it is not possible to predict how other universities / institutes might manage their jupyter environments (for example, via JupyterHub), these Flatiron-specific steps are not meant to be totally prescriptive. Instead, they are meant to guide the user to consult their own university / institute's documentation for running Jupyter notebooks on GPUs.
 
 If the user is unable to launch Jupyter lab to run on a machine with GPU(s), the user should consult our other documentation (ADD LINK HERE) for how to train neural networks via SLURM script (using sbatch).
+
+TODO: python version of code for fine-tuning
 
 ## Download sample data and models for training.
 
