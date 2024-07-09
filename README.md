@@ -109,7 +109,7 @@ After the full notebook is run, the file ending in '_graph.mat' saves the lineag
 
 'node_info_..._....csv' show nuclear centroids (aligned from timepoint to consecutive timepoint).
 
-'test_transforms.json' saves information about the rigid transformation estimated during registration (from timepoint to consecutive timepoint).
+'test_transforms.json' saves information about the rigid transformation estimated during registration (from timepoint to the following timepoint).
 
 ### Note potential issue for Cell 8: setup CPD
 
