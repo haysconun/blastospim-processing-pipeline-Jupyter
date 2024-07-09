@@ -143,7 +143,7 @@ Tree visualization and correction tool -- Aaron's?
 
 TODO: Enable some limited visualization of the tracking within the Jupyter notebook
 
-# Training BlastoSPIM-trained models on other Ground-truth Datasets (Jupyter notebook running on GPU)
+# Training BlastoSPIM-trained models on other Ground-Truth Datasets (Jupyter notebook running on GPU)
 
 ## WARNING: install procedure depends on configuration of your university / institute's computing environment
 
@@ -205,6 +205,10 @@ module load jupyter-kernels
 ```
 python -m make-custom-kernel kernel_name_finetune
 ```
+
+Making a custom kernel is required if you are accessing a jupyter notebook via the link below.
+
+This custom kernel allows you to run the jupyter notebook within the virtual environment + modules you have loaded.
 
 ### Open jupyter hub, request gpu, and choose kernel
 
