@@ -22,7 +22,7 @@ Download and install MATLAB.
 
 ### Make a virtual environment (with Python 3.9)
 In terminal, create a new virtual environment.
-Replace path/to/venv below with your chosen path and name of your virtual environment -- this will create a new folder.
+Replace path/to/venv below with your chosen path and name of your virtual environment -- this will create a new directory.
 
 ```
 python3.9 -m venv path/to/venv
@@ -47,7 +47,7 @@ pip install -r /path/to/requirements_file.txt
 pip install git+https://github.com/bhoeckendorf/pyklb.git@skbuild
 ```
 
-Note: pyklb may not install correctly on your machine, but this is only required for reading and writing images in the klb format.
+Note: pyklb may not install correctly on your machine, but this is not strictly necessary -- only required if reading and writing images in the klb format.
 
 ### Optional install: visualization code. See [here](https://github.com/AaronWatters/volume_gizmos) for more details.
 ```
@@ -133,7 +133,7 @@ This loads results from Cell 9.
 
 ### Note potential issue
 
-This has only been tested for mac and linux machines.
+This has only been tested on mac and linux machines.
 
 ## Correction of segmentation and tracking
 
@@ -141,11 +141,19 @@ See documentation of ImageJ plugin tool AnnotatorJ version 1.6 ( see [here](http
 
 Tree visualization and correction tool -- Aaron's?
 
-TODO: Enable some limited visualization of the tracking within the Jupyter notebook
+TODO: Enable some limited visualization of the tracks within the Jupyter notebook
 
 # Training BlastoSPIM-trained models on other Ground-Truth Datasets (Jupyter notebook running on GPU)
 
-## WARNING: install procedure depends on configuration of your university / institute's computing environment
+You can train a model on a machine with no cuda-capable GPU(s).
+
+For that, simply make sure that have completed the setup steps above.
+
+Then, open the jupyter notebook called 'FineTuneModelExample.ipynb'
+
+Evaluate cells in that notebook. Please note that the training will be much slower than if you were training on a GPU.
+
+## WARNING: for use on a GPU, install procedure depends on configuration of your university / institute's computing environment
 
 You need a device with cuda-capable GPU(s) for this fine-tuning notebook.
 
@@ -178,12 +186,6 @@ python3 download_data_and_models_for_finetune.py
 models_for_finetuning contain copies of our models (for training them further on the Platynereis data.
 
 data_for_evaluating_finetune contains other Platynereis ground-truth data for evaluating the models.
-
-## Download jupyter notebooks for finetuning and evaluating
-
-TODO: These will actually be included in this same git repo. (both the finetuning and evaluating)
-TODO: Probably include MakeTrainSet function
-TODO: Put these codes in their own directory in git repo
 
 ## Guide to loading jupyter notebook properly on Flatiron Cluster
 
@@ -227,7 +229,7 @@ For the job, select "gpu node (4 hours)".
 
 Click Start.
 
-Open the jupyter notebook for finetuning.
+### Open the jupyter notebook called 'FineTuneModelExample.ipynb'
 
 Choose the kernel you made above ( see the make-custom-kernel command above ) in the top right.
 
@@ -235,3 +237,4 @@ Evaluate the cells to fine-tune on an example dataset.
 
 TODO: put back in augmentation ( problem with pyimgaug3d )
 
+TODO: put in notebook for evaluating fine-tuned model.
