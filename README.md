@@ -1,6 +1,8 @@
 
 # BLASTOSPIM Segmentation and Tracking Pipeline (Jupyter notebook running on CPU)
 
+This has only been tested on windows, mac, and linux machines.
+
 ## Step 1: Installing MATLAB & Python and downloading sample files
 
 ### Download code via git clone (from terminal).
@@ -9,7 +11,7 @@
 git clone https://github.com/haysconun/blastospim-processing-pipeline-Jupyter
 ```
 
-Note that if this git clone command fails, you may need to first install Git.
+If this git clone command fails, you may need to first install Git.
 
 ### Install Python 3.9, pip, and MATLAB.
 Note: Installing any other version of python will likely result in errors during subsequent installation steps.
@@ -24,6 +26,7 @@ Make sure that the “Image Processing Toolkit'', "Computer vision toolkit", and
 
 ### Make a virtual environment (with Python 3.9)
 In terminal, create a new virtual environment.
+
 Replace path/to/venv below with your chosen path and name of your virtual environment -- this will create a new directory.
 
 ```
@@ -71,8 +74,6 @@ cd path/to/your/blastospim-processing-pipeline-Jupyter
 ```
 python3 download_data_and_models.py
 ```
-
-TODO: change google drive link to blastospim link for data
 
 ### Install Jupyter lab or notebook AND open jupyter while your virtual environment is activated.
 ```
@@ -145,17 +146,9 @@ Specify timeindex1, the first time index in a pair of consecutive frames.
 
 This loads results from Cell 9.
 
-### Note potential issue
-
-This has only been tested on mac and linux machines.
-
-## Correction of segmentation and tracking
+## Correction of segmentation
 
 See documentation of ImageJ plugin tool AnnotatorJ version 1.6 ( see [here](https://github.com/PrincetonUniversity/blastospim-processing-pipeline) ).
-
-Tree visualization and correction tool -- Aaron's?
-
-TODO: Enable some limited visualization of the tracks within the Jupyter notebook
 
 # Training BlastoSPIM-trained models on other Ground-Truth Datasets (Jupyter notebook running on GPU)
 
@@ -178,12 +171,6 @@ This assumes that you have installed requirements as outlined in the steps above
 The commands below specify how a jupyter notebook is run on the Flatiron cluster (rusty). 
 
 Because it is not possible to predict how other universities / institutes might manage their jupyter environments (for example, via JupyterHub), these Flatiron-specific steps are not meant to be totally prescriptive. Instead, they are meant to guide the user to consult their own university / institute's documentation for running Jupyter notebooks on GPUs.
-
-If the user is unable to launch Jupyter lab to run on a machine with GPU(s), the user should consult our other documentation (ADD LINK HERE) for how to train neural networks via SLURM script (using sbatch).
-
-TODO: python version of code for fine-tuning
-
-TODO: might be easier to offer set up via conda -- Cellpose docu suggests it is easier to enforce right CUDA version, etc.
 
 ## Download sample data and models for training.
 
