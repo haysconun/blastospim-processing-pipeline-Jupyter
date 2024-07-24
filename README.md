@@ -235,7 +235,3 @@ Click Start.
 Choose the kernel you made above ( see the make-custom-kernel command above ) in the top right.
 
 Evaluate the cells to fine-tune on an example dataset.
-
-TODO: put back in augmentation ( problem with pyimgaug3d )
-
-TODO: put in notebook for evaluating fine-tuned model.
