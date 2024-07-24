@@ -166,7 +166,7 @@ This assumes that you have installed requirements as outlined in the steps above
 
 The commands below specify how a jupyter notebook is run on the Flatiron cluster (rusty) and on the Princeton cluster Della.
 
-Because it is not possible to predict how other universities / institutes might manage their jupyter environments (for example, via JupyterHub), these Flatiron-specific steps are not meant to be totally prescriptive. Instead, they are meant to guide the user to consult their own university / institute's documentation for running Jupyter notebooks on GPUs.
+Because it is not possible to predict how other universities / institutes might manage the use of jupyter on their GPUs (for example, via JupyterHub), these Flatiron-specific steps are not meant to be totally prescriptive. Instead, they are meant to guide the user to consult their own university / institute's documentation for running Jupyter notebooks on GPUs.
 
 ## Download sample data and models for training.
 
