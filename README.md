@@ -42,6 +42,8 @@ python --version
 pip install -r /path/to/requirements_file.txt
 ```
 
+Note potential error: "ERROR: No matching distribution found for tensorflow-io-gcs-filesystem==0.32.0 (from -r requirements_file.txt (line 113))". To fix this, remove the file version for tensorflow-io-gcs-filesystem==0.32.0 in the requirements.txt file.
+
 ### Optional install: pip install pyklb.
 ```
 pip install git+https://github.com/bhoeckendorf/pyklb.git@skbuild
