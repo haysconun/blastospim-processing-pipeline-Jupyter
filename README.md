@@ -18,6 +18,8 @@ pip should be automatically installed with Python 3.9, but if it is not, install
 
 Download and install MATLAB.
 
+Make sure that the “Image Processing Toolkit'', "Computer vision toolkit", and  "Statistics and machine learning toolkit" are installed.
+
 ## Step 2: Make virtual environment, pip install the requirements file, & open Jupyter.
 
 ### Make a virtual environment (with Python 3.9)
@@ -126,6 +128,16 @@ cpd_make
 ```
 
 *On MAC OSX you will need to install Xcode from the App store and run Xcode once to accept the license aggrement.*
+
+For Windows Users,
+
+1. For new installs of matlab can install ‘MinGW’ compiler via matlab AddOn browser.
+
+2. Run “mex –setup” after installing above
+
+3. Navigating to ‘lineage_track’ folder run “Addpath(‘CPD2’)”, “Addpath(‘CPD2/core’)”
+
+4. Then run “cpd_make”
 
 ### Cells 10, 11 (OPTIONAL): visualize 3D point clouds for two adjacent timepoints
 
