@@ -160,8 +160,6 @@ Evaluate cells in that notebook. Please note that the training will be much slow
 
 ## WARNING: for use on a GPU, install procedure depends on configuration of your university / institute's computing environment
 
-You need a device with cuda-capable GPU(s) for this fine-tuning notebook.
-
 To install the NVIDIA driver for your GPU, see [here](https://www.nvidia.com/Download/index.aspx?lang=en-us) to download it. Also install the CUDA toolkit (by choosing one of the 11.x releases [here](https://developer.nvidia.com/cuda-toolkit-archive)).
 
 This assumes that you have installed requirements as outlined in the steps above (pip installing requirements).
