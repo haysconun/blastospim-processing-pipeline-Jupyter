@@ -1,8 +1,6 @@
 
 # BLASTOSPIM Segmentation and Tracking Pipeline (Jupyter notebook running on CPU)
 
-This has only been tested on windows, mac, and linux machines.
-
 ## Step 1: Installing MATLAB & Python and downloading sample files
 
 ### Download code via git clone (from terminal).
