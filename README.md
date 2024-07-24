@@ -262,18 +262,6 @@ Request that it load cudnn/cuda-11.x/8.2.0 and cudatoolkit/11.7
 
 ### Open jupyter hub, request gpu, and choose kernel
 
-Load from your internet browser 
-
-```
-https://jupyter.flatironinstitute.org/
-```
-
-For the environment, select "jupyterlab (modules/2.2)".
-
-For the job, select "gpu node (4 hours)".
-
-Click Start.
-
 ### Open the jupyter notebook called 'FineTuneModelExample.ipynb'
 
 Choose the kernel you made above ( see the make-custom-kernel command above ) in the top right.
