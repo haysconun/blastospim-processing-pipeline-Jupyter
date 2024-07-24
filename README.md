@@ -256,14 +256,13 @@ Request a node with GPU to run a jupyter notebook.
 
 Request that it load cudnn/cuda-11.x/8.2.0 and cudatoolkit/11.7
 
-### Open jupyter hub, request gpu, and choose kernel
-
 ### Open the jupyter notebook called 'FineTuneModelExample.ipynb'
-
-Choose the kernel you made above ( see the make-custom-kernel command above ) in the top right.
 
 Evaluate the cells to fine-tune on an example dataset.
 
+Note that you may see tensorflow warnings as you evaluate cells in the notebook.
+
+Only those labeled as E are errors.
 
 
 
