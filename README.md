@@ -9,7 +9,7 @@
 git clone https://github.com/haysconun/blastospim-processing-pipeline-Jupyter
 ```
 
-TODO: make this into an FI or Princeton git repo.
+Note that if this git clone command fails, you may need to first install Git.
 
 ### Install Python 3.9, pip, and MATLAB.
 Note: Installing any other version of python will likely result in errors during subsequent installation steps.
