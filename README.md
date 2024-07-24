@@ -235,3 +235,52 @@ Click Start.
 Choose the kernel you made above ( see the make-custom-kernel command above ) in the top right.
 
 Evaluate the cells to fine-tune on an example dataset.
+
+
+
+## Guide to loading jupyter notebook properly on della at Princeton
+
+load anaconda3/2024.6
+
+### Make and activate conda environment
+
+```
+CONDA_OVERRIDE_CUDA="11.2" conda create -n tf2-segmentation python=3.9 "tensorflow==2.11.1=cuda112*" --channel conda-forge
+
+conda activate tf2-segmentation
+```
+
+### pip install requirements
+```
+pip install -r /path/to/requirements_file.txt
+```
+
+### Running on a GPU
+Request a node with GPU to run a jupyter notebook. 
+
+Request that it load cudnn/cuda-11.x/8.2.0 and cudatoolkit/11.7
+
+### Open jupyter hub, request gpu, and choose kernel
+
+Load from your internet browser 
+
+```
+https://jupyter.flatironinstitute.org/
+```
+
+For the environment, select "jupyterlab (modules/2.2)".
+
+For the job, select "gpu node (4 hours)".
+
+Click Start.
+
+### Open the jupyter notebook called 'FineTuneModelExample.ipynb'
+
+Choose the kernel you made above ( see the make-custom-kernel command above ) in the top right.
+
+Evaluate the cells to fine-tune on an example dataset.
+
+
+
+
+
